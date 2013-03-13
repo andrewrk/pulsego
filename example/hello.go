@@ -1,7 +1,9 @@
 package main
 
-import "pulse"
-import "fmt"
+import (
+	"fmt"
+	"github.com/moriyoshi/pulsego"
+)
 
 func send(ch chan int, val int) {
     ch <- val
