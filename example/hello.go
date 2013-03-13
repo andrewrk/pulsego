@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/moriyoshi/pulsego"
+	"github.com/superjoe30/pulsego"
 )
 
 func send(ch chan int, val int) {
