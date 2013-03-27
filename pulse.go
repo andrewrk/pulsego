@@ -447,7 +447,7 @@ func (self *PulseStream) Write(data interface{}, flags int) int {
 	typ_ := typ
 	samples := reflect.ValueOf(data)
 	nsamples := samples.Len()
-	ptr := unsafe.Pointer(samples.Index(0).UnsafeAddr())
+	ptr := unsafe.Pointer(&data)
 	switch typ_.Elem().Kind() {
 	case reflect.Int32:
 		if format != SAMPLE_S32LE && format != SAMPLE_S24_32LE {
